@@ -1,8 +1,9 @@
 name: "Delete Unused Daily Entries"
 
 on:
-  schedule:
+  - schedule:
     - cron: "30 23 * * FRI"  # Every Friday at 11:30 PM
+  - workflow_dispatch
 
 jobs:
   aggregate-mentions:
