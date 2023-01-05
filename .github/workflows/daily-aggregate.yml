@@ -7,7 +7,7 @@ on:
 jobs:
   aggregate-mentions:
     runs-on: ubuntu-latest
-    name: Aggregate Mentions
+    name: Aggregate Project Mentions
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
