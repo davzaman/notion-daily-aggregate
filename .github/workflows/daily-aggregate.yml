@@ -2,18 +2,18 @@ name: "Daily Aggregate of Project Mentions"
 
 on:
   schedule:
-    # Every day at 11:30 PM
-    - cron: "30 23 * * *"
+    - cron: "30 23 * * *"  # Every day at 11:30 PM
 
 jobs:
   aggregate-mentions:
     runs-on: ubuntu-latest
     name: Aggregate Mentions
     steps:
+      # https://github.com/actions/setup-python
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.8'
           - name: Install dependencies
             run: |
               python -m pip install --upgrade pip
