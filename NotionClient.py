@@ -175,3 +175,12 @@ class NotionClient:
         res = session.post(f"{self.API_URL}/pages", headers=self.headers, json=payload)
         res.raise_for_status()
         return res.text
+
+    def delete_block(self, session: Session, block_id: str) -> str:
+        """
+        DELETE block/page endpoint.
+        https://developers.notion.com/reference/delete-a-block
+        """
+        res = session.delete(f"{self.API_URL}/blocks/{block_id}", headers=self.headers)
+        res.raise_for_status()
+        return res.text

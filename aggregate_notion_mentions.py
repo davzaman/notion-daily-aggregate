@@ -81,7 +81,6 @@ def _create_new_page_content(contents_per_project: Dict[str, List[Dict]]) -> Lis
 
 if __name__ == "__main__":
     # TODO: how do update this on new days instead of rerunning it on everything?
-    # TODO: how to delete empty entries (but have content because of the template)
     # TODO: created synced_blocks to original comments instead of copying and pasting everything over (API limitation as of 1/3/23)
 
     secret = os.environ["NOTION_INTEGRATION_SECRET"]
