@@ -2,7 +2,7 @@ name: "Delete Unused Daily Entries"
 
 on:
   schedule:
-    - cron: "30 23 * * FRI"  # Every Friday at 11:30 PM
+    - cron: "30 7 * * SAT"  # Every Friday at 11:30 PM PST (7:30 AM UTC SAT)
   workflow_dispatch:
 
 jobs:

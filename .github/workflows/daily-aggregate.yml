@@ -2,7 +2,7 @@ name: "Daily Aggregate of Project Mentions"
 
 on:
   schedule:
-    - cron: "30 23 * * *"  # Every day at 11:30 PM
+    - cron: "30 7 * * *"  # Every day at 11:30 PM PST (7:30 AM UTC)
   workflow_dispatch:
 
 jobs:
