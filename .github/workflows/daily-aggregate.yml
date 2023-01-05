@@ -1,0 +1,25 @@
+name: "Daily Aggregate of Project Mentions"
+
+on:
+  schedule:
+    # Every day at 11:30 PM
+    - cron: "30 23 * * *"
+
+jobs:
+  aggregate-mentions:
+    runs-on: ubuntu-latest
+    name: Aggregate Mentions
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install tqdm
+      - name: Run script
+        run: |
+          python aggregate_notion_mentions.py
+        env:
+            NOTION_INTEGRATION_SECRET: ${{ secrets.NOTION_INTEGRATION_SECRET }}
