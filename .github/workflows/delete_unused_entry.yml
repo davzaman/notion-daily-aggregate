@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install dateutil requests
+          pip install python-dateutil requests
       - name: Run script
         run: |
           python delete_unused_daily_entry.py
